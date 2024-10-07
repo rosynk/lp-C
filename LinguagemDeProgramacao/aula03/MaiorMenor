@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+  int n, maior = 0, menor = 0, quantidade;
+  printf("Quantos valores vc deseja digitar? ");
+  scanf("%d" , &quantidade);
+
+  for (int num = 0; num < quantidade; num++) {
+    printf("Insira o número desejado: ");
+    scanf("%d", &n);
+
+    if (menor == 0) {
+      menor = n;
+    } else if (maior < n) {
+      maior = n;
+    } else if (menor > n) {
+      menor = n;
+    }
+  }
+
+  printf("Maior >> %d  Menor >> %d\n", maior, menor);
+
+  return 0;
+}

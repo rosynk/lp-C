@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int n, maior, menor, quantidade;
+    printf("Quantos valores você deseja digitar? ");
+    scanf("%d", &quantidade);
+
+    int vetor[quantidade];
+
+    
+    printf("Insira o número desejado: ");
+    scanf("%d", &n);
+
+    vetor[0] = n;
+    maior = menor = n;
+
+    
+    for (int num = 1; num < quantidade; num++) {
+        printf("Insira o número desejado: ");
+        scanf("%d", &n);
+
+        vetor[num] = n;
+
+        if (n > maior) {
+            maior = n;
+        } 
+
+        if (n < menor) {
+            menor = n;
+        }
+    }
+
+   
+    for (int num = quantidade - 1; num >= 0; num--) {
+        printf("> %d ", vetor[num]);
+    }
+
+    printf("\nMaior >> %d  Menor >> %d\n", maior, menor);
+
+    return 0;
+}

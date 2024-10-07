@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+  char string1[5][20], string2[20], string3[20];
+  int matriz[2][3];
+
+  for (int i = 0; i < 5; i++) {
+    printf("Digite a string: ");
+    scanf("%s", string1[i]);
+  }
+
+  for (int i = 0; i < 5; i++) {
+    printf("\nString %d: %s", i, string1[i]);
+  }
+
+  return 0;
+}

@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+  int n, mul, quantidade, valor;
+  printf("Quantos valores vc deseja digitar? ");
+  scanf("%d", &quantidade);
+
+  printf("Por qual valor vc deseja multiplicar? ");
+  scanf("%d", &mul);
+
+  int vetor[quantidade];
+  int multiplicado[quantidade];
+
+    for (int num = 0; num < quantidade; num++) {
+      printf("Insira o número desejado: ");
+      scanf("%d", &n);
+
+      vetor[num] = n;
+      valor = n * mul;
+      multiplicado[num] = valor;
+
+    }
+
+  for (int num = 0; num < quantidade; num++) {
+    printf("> %d ", vetor[num]);  
+  }
+  printf("\n------------------------\n");
+  for (int num = 0; num < quantidade; num++) {
+    printf("> %d ", multiplicado[num]);  
+  }
+
+  return 0;
+}

@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  int n, quantidade;
+
+  printf("Quantos valores você deseja digitar? ");
+  scanf("%d", &quantidade);
+
+  int vetor[quantidade];
+  double raiz[quantidade];  
+
+  for (int num = 0; num < quantidade; num++) {
+    printf("Insira o número desejado: ");
+    scanf("%d", &n);
+
+    vetor[num] = n;
+    raiz[num] = sqrt(vetor[num]);  
+  }
+
+  for (int num = 0; num < quantidade; num++) {
+    printf("> %d ", vetor[num]);  
+  }
+
+  printf("\n------------------------\n");
+
+  for (int num = 0; num < quantidade; num++) {
+    printf("> %.2f ",  raiz[num]);
+  }
+
+  printf("\n");
+
+  return 0;
+}

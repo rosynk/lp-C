@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    float nota1, trab1, nota2, trab2;
+    int PF;
+
+    // Solicitando as notas
+    printf("Informe a primeira nota da prova: ");
+    scanf("%f", &nota1);
+    printf("Informe a primeira nota do trabalho: ");
+    scanf("%f", &trab1);
+    printf("Informe a segunda nota da prova: ");
+    scanf("%f", &nota2);
+    printf("Informe a segunda nota do trabalho: ");
+    scanf("%f", &trab2);
+
+    // Validando as notas
+    if (nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10 || trab1 < 0 || trab1 > 10 || trab2 < 0 || trab2 > 10) {
+        printf("Apenas notas entre 0 e 10\n");
+        return 1;
+    }
+
+    // Solicitando o percentual de presença
+    printf("Qual é o percentual de presença do aluno? ");
+    scanf("%d", &PF);
+
+    // Validando o percentual de presença
+    if (PF > 100 || PF < 0) {
+        printf("Percentual de presença deve ser entre 0%% e 100%%\n");
+        return 1;
+    }
+
+    // Calculando a média
+    float media = (((nota1 * 0.7) + (trab1 * 0.3)) + ((nota2 * 0.6) + (trab2 * 0.4))) / 2;
+
+    // Verificando se o aluno foi aprovado ou reprovado
+    if (media > 6 && PF >= 60) {
+        printf("Aprovado\n- nota >>> %.2f\n- presença >>> %d%%\n", media, PF);
+    } else {
+        printf("Reprovado\n- nota >>> %.2f\n- presença >>> %d%%\n", media, PF);
+    }
+
+    return 0;
+}

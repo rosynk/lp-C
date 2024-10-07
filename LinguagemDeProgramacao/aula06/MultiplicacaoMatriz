@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+
+  int n;
+  printf("Digite o número da matriz: ");
+  scanf("%d", &n);
+
+  int matriz1[n][n], matriz2[n][n], matriz3[n][n];
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++){
+      printf("Digite o valor da matriz 1 na posição [%d][%d]: ", i, j);
+      scanf("%d", &matriz1[i][j]);
+    }
+  }
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++){
+      printf("Digite o valor da matriz 2 na posição [%d][%d]: ", i, j);
+      scanf("%d", &matriz2[i][j]);
+    }
+  }
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++){
+      matriz3[i][j] = matriz1[i][j] * matriz2[i][j];
+    }
+  }
+
+  printf("A matriz resultante da multiplicação é:\n");
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++){
+      printf("%d ", matriz3[i][j]);
+    }
+    printf("\n");
+  }
+
+  return 0;
+}

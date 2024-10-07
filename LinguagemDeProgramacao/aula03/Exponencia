@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  int n, mul, quantidade, valor;
+  printf("Quantos valores vc deseja digitar? ");
+  scanf("%d", &quantidade);
+
+  printf("Por qual valor vc deseja exponenciar? ");
+  scanf("%d", &mul);
+
+  int vetor[quantidade];
+  int expoente[quantidade];
+
+    for (int num = 0; num < quantidade; num++) {
+      printf("Insira o número desejado: ");
+      scanf("%d", &n);
+
+      vetor[num] = n;
+      expoente[num] = pow(vetor[num], mul);
+    }
+
+  for (int num = 0; num < quantidade; num++) {
+    printf("> %d ", vetor[num]);  
+  }
+  printf("\n------------------------\n");
+  for (int num = 0; num < quantidade; num++) {
+    printf("> %d ",  expoente[num]);  
+  }
+
+  return 0;
+}

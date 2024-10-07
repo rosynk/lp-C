@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main ()
+{
+  int valor;
+  int n = 1;
+
+  printf("Informe um valor para o fatorial: ");
+  scanf("%d", &valor );
+
+  while (valor != 0){
+    n *= valor;
+    valor -= 1;    
+}  
+
+   printf("O fatorial é: %d ", n);
+
+
+  return 0;
+}

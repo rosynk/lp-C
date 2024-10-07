@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+
+  int n, num, valor = 0;
+
+  printf("Informe um número para ser a razão da p.a: ");
+  scanf("%d", &n);
+  printf("Informe até qual número vc quer q a P.A chegue: ");
+  scanf("%d", &num);
+
+  do {
+
+    printf("%d ", valor);
+    valor += n;
+
+  } while (valor <= num);
+
+  return 0;
+}

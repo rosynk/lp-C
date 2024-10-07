@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char palavra1[10];
+    char palavra2[10];
+    char concatenar[20];  
+
+
+    printf("Informe uma palavra: ");
+    scanf("%s", palavra1);
+
+    printf("Informe outra palavra: ");
+    scanf("%s", palavra2);
+
+
+    int len1 = strlen(palavra1);
+    int len2 = strlen(palavra2);
+
+
+    for (int i = 0; i < len1; i++) {    
+        concatenar[i] = palavra1[i];    
+    }
+
+
+    for (int i = 0; i < len2; i++) {
+        concatenar[len1 + i] = palavra2[i];
+    }
+
+
+    concatenar[len1 + len2] = '\0';
+
+
+    printf("A palavra concatenada é: %s\n", concatenar);
+
+    return 0;
+}

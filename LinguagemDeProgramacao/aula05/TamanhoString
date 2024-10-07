@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char palavra1[10];
+    int j = 0;
+
+    printf("Informe uma palavra: ");
+    scanf("%s", palavra1);
+
+
+    int len1 = strlen(palavra1);
+
+    for (int i = 0; i < len1; i++) {    
+            j += 1;
+    }
+
+    printf("A tamanho da palavra é: %d\n", j);
+
+    return 0;
+}

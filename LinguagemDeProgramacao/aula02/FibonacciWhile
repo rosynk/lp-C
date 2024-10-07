@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n, i = 1;
+    int t1 = 0, t2 = 1;
+    int nextTerm;
+
+    printf("Informe o número de termos: ");
+    scanf("%d", &n);
+
+    printf("Sequência de Fibonacci: ");
+
+   while (i <= n){
+        printf("%d ", t1);
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+        i++;
+    }
+
+    return 0;
+}

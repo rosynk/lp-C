@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    float preco;
+    int n;
+
+    // Solicitando o valor do produto
+    printf("Informe o valor do produto: ");
+    scanf("%f", &preco);
+
+    // Solicitando a opção de desconto
+    printf("------------------------------\n");
+    printf("Ler um preço e uma opção de desconto segundo a tabela abaixo:\n");
+    printf("1) 5%% de desconto\n");
+    printf("2) 8%% de desconto\n");
+    printf("3) 18%% de desconto\n");
+    printf("4) 30%% de desconto\n");
+    printf("5) 50%% de desconto\n");
+    printf("------------------------------\n");
+    scanf("%d", &n);
+
+    // Aplicando o desconto conforme a opção escolhida
+    switch (n) {
+        case 1:
+            printf("Preço com 5%% de desconto: %.2f\n", preco * 0.95);
+            break;
+        case 2:
+            printf("Preço com 8%% de desconto: %.2f\n", preco * 0.92);
+            break;
+        case 3:
+            printf("Preço com 18%% de desconto: %.2f\n", preco * 0.82);
+            break;
+        case 4:
+            printf("Preço com 30%% de desconto: %.2f\n", preco * 0.70);
+            break;
+        case 5:
+            printf("Preço com 50%% de desconto: %.2f\n", preco * 0.50);
+            break;
+        default:
+            printf("Opção inválida.\n");
+            break;
+    }
+
+    return 0;
+}

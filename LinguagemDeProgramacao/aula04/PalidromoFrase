@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char palindromo[20];
+    int length = 0, vdd = 1, j = 0;
+
+    printf("Informe seu suposto palíndromo: ");
+    scanf(" %[^\n]", palindromo);
+
+    printf("Você digitou: %s", palindromo);
+
+    while (palindromo[length] != '\0') {
+        length++;
+    }
+
+    char pali[length + 1]; 
+
+    for (int i = 0; i < length; i++){
+        if (palindromo[i] != ' '){
+            pali[j] = palindromo[i];
+            j++;
+        }
+    }
+    pali[j] = '\0';
+
+    printf("\nVocê digitou sem espaços: %s", pali);
+
+    for (int i = 0; i < j; i++){
+        if (pali[i] != pali[j - i - 1]){
+            vdd = 0;
+            break;
+        }
+    }
+
+    if (vdd == 1){
+        printf("\nÉ um palíndromo!");
+    } else {
+        printf("\nNão é um palíndromo!");
+    }
+
+    return 0;
+}

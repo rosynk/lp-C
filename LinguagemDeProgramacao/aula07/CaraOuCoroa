@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+   
+    //for (int i = 0; i<= 200; i++) {  
+    //  printf("%d = %c\n", i, i);
+    //}
+
+    double qtd;
+    int num, CaraCoroa;
+    int apostas = 0;
+  
+    printf("Você gostaria de rodar o jogo quantas vezes? ");
+    scanf("%lf", &qtd);
+
+    printf("Deseja apostar em \n1 - Cara \nou \n2 - Coroa?\n");
+    scanf("%d", &CaraCoroa);
+
+    srand(time(NULL));
+    for (int i = 0; i < qtd; i++){
+      num = rand();
+      num = num % 2;
+      printf("\n%d >> ", i);
+      if (num == CaraCoroa){
+        printf("Você ganhou essa rodada");
+        apostas += 1;
+      } else {
+        printf("Você perdeu essa rodada");
+      }
+    }
+
+    if (apostas < qtd/2){
+      printf("\nVocê perdeu o jogo");
+    } else {
+      printf("\nVocê ganhou o jogo");
+    }
+
+    return 0;
+}
